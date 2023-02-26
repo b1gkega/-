@@ -42,30 +42,30 @@ print(coun)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-spisk = []
-coun = 0
 from itertools import product
-cab = product('ЯУНОПТИА', repeat=16)
+cab = product('СВЕТЛАН', repeat=8)
+spisk = []
 for i in cab:
     s = ''.join(i)
-    if s.count('АНТИУТОПИЯ') == 1 and s.count('Н') + s.count('П') + s.count('Т') <= 6:
-        coun += 1
-print(coun)
+    if (s.count('С') == 1) and (s.count('В') == 1) and (s.count('Е') == 1) and (s.count('Т') == 1) and (s.count('Л') == 1) and (s.count('А') == 2) and (s.count('Н') == 1):
+        if s.count('АА') == 0:
+            spisk.append(s)
+print(len(spisk))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
