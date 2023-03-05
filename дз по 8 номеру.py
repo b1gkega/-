@@ -41,7 +41,7 @@ print(coun)
 
 
 
-
+'''
 from itertools import product
 cab = product('СВЕТЛАН', repeat=8)
 spisk = []
@@ -50,10 +50,17 @@ for i in cab:
     if (s.count('С') == 1) and (s.count('В') == 1) and (s.count('Е') == 1) and (s.count('Т') == 1) and (s.count('Л') == 1) and (s.count('А') == 2) and (s.count('Н') == 1):
         if s.count('АА') == 0:
             spisk.append(s)
+print(len(spisk))'''
+
+
+from itertools import product
+cab = product('ABCX', repeat=5)
+spisk = []
+for i in cab:
+    s = ''.join(i)
+    if (s[-1] == 'X' and s.count('X') == 1) or s.count('X') == 0:
+        spisk.append(s)
 print(len(spisk))
-
-
-
 
 
 
