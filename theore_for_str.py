@@ -10,9 +10,9 @@ while "222" in a or "888" in a:
     a.replace('888', '2', 1)
 print(a)'''
 
-a = '1' + '8' * 80
-while "18" in a or "288" in a or "3888" in a:
-    a = a.replace("18", "2", 1)
-    a = a.replace('288', '3', 1)
-    a = a.replace('3888', "1", 1)
-print(a)
+a = '>' + '1' * 11  + '2' * 12 + '3' * 30
+while ">1" in a or ">2" in a or ">3" in a:
+    a = a.replace(">1", "22>", 1)
+    a = a.replace('>2', '2>', 1)
+    a = a.replace('>3', "1>", 1)
+print(a.count('2')*2 + a.count('1') + a.count('3'))
