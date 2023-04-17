@@ -47,24 +47,24 @@
 #         bebra = ""
 # print(max(cocojumbo, key=len))
 
-from itertools import product
-coun = 1
-maximka = 0
-cocojumbo = []
-
-'''cab = product('QRS', repeat=2)
-for m in cab:
-    k = ''.join(m)
-    cocojumbo.append(k)
-s = open("24_7600.txt").readline()
-for i in range(len(s)-1):
-    if (s[i] + s[i+1]) not in cocojumbo:
-        coun += 1
-    else:
-        maximka = max(maximka, coun)
-        coun = 1
-print(coun)
-'''
+# from itertools import product
+# coun = 1
+# maximka = 0
+# cocojumbo = []
+#
+# '''cab = product('QRS', repeat=2)
+# for m in cab:
+#     k = ''.join(m)
+#     cocojumbo.append(k)
+# s = open("24_7600.txt").readline()
+# for i in range(len(s)-1):
+#     if (s[i] + s[i+1]) not in cocojumbo:
+#         coun += 1
+#     else:
+#         maximka = max(maximka, coun)
+#         coun = 1
+# print(coun)
+# '''
 
 # s = open("24_7600.txt").readline()
 # cab = product('QRS', repeat=2)
@@ -73,3 +73,4 @@ print(coun)
 #     s = s.replace(k, " ")
 # s = s.split()
 # print(len(max(s, key=len))+2)
+
