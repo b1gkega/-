@@ -26,6 +26,6 @@ def do_math(stroka):
                 bebra *= int(sortirovan[chislo][2:])
             case 3:
                 bebra /= int(sortirovan[chislo][2:])
-
+    print(bebra)
 
 do_math("24z6 1x23 y369 89a 900b")
