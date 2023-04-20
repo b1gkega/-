@@ -57,3 +57,32 @@
 #     if a[i+1] % 3 == 0 or a[i] % 3 == 0:
 #         accept.append(a[i]+a[i+1])
 # print(len(accept), max(accept))
+
+#48465
+# accept = []
+# a = [int(x) for x in open("17 (8).txt")]
+# c_6_na_konce = []
+# for bebra in a:
+#     if str(bebra)[-1] == "6":
+#         c_6_na_konce.append(int(bebra))
+# minimalk = min(c_6_na_konce)
+# for bebe in range(len(a)-1):
+#     if (str(a[bebe])[-1] == "6" and str(a[bebe + 1])[-1] != "6") or (str(a[bebe])[-1] != "6" and str(a[bebe + 1])[-1] == "6"):
+#         if (a[bebe]**2 + a[bebe+1]**2) < minimalk**2:
+#             accept.append(a[bebe]**2 + a[bebe+1]**2)
+#
+# print(len(accept), max(accept))
+
+# accept = []
+# a = [int(x) for x in open("17 (9).txt")]
+# c_3_na_konce = []
+# for bebra in a:
+#     if str(bebra)[-1] == "3":
+#         c_3_na_konce.append(int(bebra))
+# minimalk = max(c_3_na_konce)
+# for bebe in range(len(a)-1):
+#     if (str(a[bebe])[-1] == "3" and str(a[bebe + 1])[-1] != "3") or (str(a[bebe])[-1] != "3" and str(a[bebe + 1])[-1] == "3"):
+#         if (a[bebe]**2 + a[bebe+1]**2) >= minimalk**2:
+#             accept.append(a[bebe]**2 + a[bebe+1]**2)
+#
+# print(len(accept), max(accept))
