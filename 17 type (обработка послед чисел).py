@@ -86,3 +86,45 @@
 #             accept.append(a[bebe]**2 + a[bebe+1]**2)
 #
 # print(len(accept), max(accept))
+
+# accept = []
+# a = [int(x) for x in open("17-205.txt")]
+# for bebra in range(len(a)-1):
+#     if (a[bebra] - a[bebra + 1]) % 74 == 0:
+#         accept.append(a[bebra]+a[bebra + 1])
+# print(len(accept), max(accept))
+
+#5066
+# accept = []
+# a = [int(x) for x in open("17-288.txt")]
+# for bebra in range(len(a)-2):
+#     if (abs(a[bebra]) % 7 != abs(a[bebra+1]) % 7 and abs(a[bebra]) % 7 != abs(a[bebra+2]) % 7 and abs(a[bebra + 2]) % 7 != abs(a[bebra+1]) % 7) and ((a[bebra] != abs(a[bebra])) or (a[bebra + 1] != abs(a[bebra + 1])) or (a[bebra + 2] != abs(a[bebra + 2]))):
+#         accept.append(max(a[bebra],a[bebra + 1],a[bebra + 2]) - min(a[bebra],a[bebra + 1],a[bebra + 2]))
+# print(len(accept),min(accept))
+
+
+#4693
+# accept = []
+# a = [int(x) for x in open("17-243.txt")]
+# del_na_119 = []
+# for chiselko in range(len(a)):
+#     if a[chiselko] % 119 == 0:
+#         del_na_119.append(a[chiselko])
+# maximka = max(del_na_119)
+# for bebra in range(len(a)-1):
+#     if (a[bebra] % 100 == 21 or a[bebra + 1] % 100 == 21) and (a[bebra]>maximka or a[bebra + 1]> maximka):
+#         accept.append(a[bebra] + a[bebra + 1])
+# print(len(accept), min(accept))
+
+# 4688
+# accept = []
+# a = [int(x) for x in open("17-243.txt")]
+# del_na_19 = []
+# for chiselko in range(len(a)):
+#     if a[chiselko] % 19 == 0:
+#         del_na_19.append(a[chiselko])
+# maximka = max(del_na_19)
+# for bebra in range(len(a)-1):
+#     if a[bebra]>maximka or a[bebra + 1]> maximka:
+#         accept.append(a[bebra] + a[bebra + 1])
+# print(len(accept), min(accept))
