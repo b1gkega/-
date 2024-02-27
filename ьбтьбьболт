@@ -1,0 +1,19 @@
+s = sorted(
+    [[int(x.split()[0]), int(x.split()[1])] for x in open("26_11243.txt").readlines()[1:]])
+kolich = 62
+zakazi = []
+bez_zad = 0
+coun_zad = 0
+for k in s:
+    if len(zakazi) < 62:
+        zakazi.append([k[0] + k[1] * 2 + 2, k[0] + k[1] + 2])
+    else:
+        zakazi.sort()
+        print(zakazi)
+        if k[0] >= zakazi[0][0]:
+            bez_zad = max(zakazi[0][1], bez_zad)
+        else:
+            coun_zad += 1
+            zakazi[0] = [k[0] + k[1] * 2 + 2, k[0] + k[1] + 2]
+print(coun_zad)
+print(bez_zad)
