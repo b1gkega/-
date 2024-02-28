@@ -1,21 +1,40 @@
-s = sorted([[int(x.split()[0]), int(x.split()[1])] for x in open("26_11243.txt").readlines()[1:]])
-kolich = 62
-zakazi = []
-bez_zad = 0
-coun_zad = 0
+# s = sorted([[int(x.split()[0]), int(x.split()[1])] for x in open("26_11243.txt").readlines()[1:]])
+# kolich = 62
+# zakazi = []
+# bez_zad = 0
+# coun_zad = 0
+# for k in s:
+#     if len(zakazi) < 62:
+#         zakazi.append(k[0] + k[1] * 2 + 2)
+#     elif zakazi[0] <= 1440:
+#         zakazi.sort()
+#         if k[0] >= zakazi[0]:
+#             zakazi[0] = k[0] + k[1] * 2 + 2
+#             bez_zad = k[0] + k[1] + 2
+#         else:
+#             if zakazi[0] + k[1] + 2 <= 1440:
+#                 coun_zad += 1
+#             zakazi[0] = zakazi[0] + k[1] * 2 + 2
+#         zakazi.sort()
+#         print(zakazi)
+# print(coun_zad)
+# print(bez_zad)
+
+
+s = sorted(
+    [[int(x.split()[2]), int(x.split()[0]), int(x.split()[1])] for x in open("26_7756 (1).txt").readlines()[1:]])[::-1]
+denek = []
+povtorka = set()
 for k in s:
-    if len(zakazi) < 62:
-        zakazi.append(k[0] + k[1] * 2 + 2)
+    if k[0] not in denek:
+        denek.append(k[0])
     else:
-        zakazi.sort()
-        if k[0] >= zakazi[0]:
-            if k[0] + k[1] + 2 <= 1440:
-                bez_zad = k[0] + k[1] + 2
-        else:
-            if k[0] + k[1]*2 + 2 <= 1440:
-                coun_zad += 1
-        if k[0] + k[1] + 2 <= 1440 and zakazi[0] <= 1440:
-            zakazi[0] = k[0] + k[1] * 2 + 2
-        print(zakazi)
-print(coun_zad)#неправильно
-print(bez_zad)
+        povtorka.add(k[0])
+work = [0] * 1440
+for k in range(len(s)):
+    if s[k][0] not in povtorka:
+        denek.append(s[k][0])
+        for m in range(s[k][1], s[k][1] + s[k][2]):
+            work[m] += 1
+    else:
+        
