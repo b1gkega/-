@@ -38,3 +38,26 @@ for k in range(len(s)):
             work[m] += 1
     else:
         
+#  ПАРКОУКИ
+# s = sorted(
+#     [[int(x.split()[0]), int(x.split()[1]) + int(x.split()[0]), x.split()[2]] for x in
+#      open("26-119.txt").readlines()[1:]])
+# l = 85
+# m = 33
+# park = [0] * (l + m)
+# car = 0
+# bus = 0
+# for i in range(len(s)):
+#     if s[i][2] == "A":
+#         for j in range(l + m):
+#             if park[j] <= s[i][0]:
+#                 park[j] = s[i][1]
+#                 car += 1
+#                 break
+#     if s[i][2] == "B":
+#         for j in range(l, l + m):
+#             if park[j] <= s[i][0]:
+#                 park[j] = s[i][1]
+#                 bus += 1
+#                 break
+# print(bus, len(s) - car - bus)
